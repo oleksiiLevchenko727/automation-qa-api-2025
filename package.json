@@ -1,0 +1,20 @@
+{
+  "name": "automation-qa-api-2025",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "cross-env NODE_OPTIONS=\"--experimental-vm-modules\" npx jest"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0",
+    "jest": "^30.2.0"
+  },
+  "dependencies": {
+    "axios": "^1.13.1",
+    "dotenv": "^17.2.3"
+  }
+}
