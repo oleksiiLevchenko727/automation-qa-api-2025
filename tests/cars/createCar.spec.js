@@ -1,6 +1,5 @@
 import { test,describe, beforeEach, expect } from "@jest/globals";
 import { faker } from '@faker-js/faker';
-import moment from "moment";
 import AuthController from "../../src/controllers/AuthController.js";
 import CarsController from "../../src/controllers/CarsController.js";
 import { wrapper } from "axios-cookiejar-support";
@@ -75,11 +74,5 @@ describe("Create car", ()=>{
         const carByIdResponse = await carsController.getCarsById(createdCar.id)
         expect(carByIdResponse.status).toBe(200);
         expect(carByIdResponse.data.data).toEqual(expectedData);
-
-        // expect(createdCar.carCreatedAt).toBe(carByIdResponse.data.data.carCreatedAt)
-        // expect(createdCar.updatedMileageAt).toBe(carByIdResponse.data.data.updatedMileageAt)
-
-        // expect(moment(beforeCarCreatedTime).diff(moment(createdCar.carCreatedAt), "minute")).toBeLessThanOrEqual(1)
-        // expect(moment(beforeCarCreatedTime).diff(moment(createdCar.updatedMileageAt), "minute")).toBeLessThanOrEqual(1)
     })
 })

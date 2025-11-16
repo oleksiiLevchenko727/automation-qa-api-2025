@@ -1,6 +1,5 @@
 import { test,describe, beforeEach, expect } from "@jest/globals";
 import { faker } from '@faker-js/faker';
-// import moment from "moment";
 import AuthController from "../../src/controllers/AuthController.js";
 import CarsController from "../../src/controllers/CarsController.js";
 import { wrapper } from "axios-cookiejar-support";
